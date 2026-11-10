@@ -2,6 +2,8 @@
 
 **Money moves when the work proves itself.**
 
+**Live demo:** https://proofpay-hp3b.onrender.com (Braintree sandbox, test card `4111 1111 1111 1111`, any future expiry, any CVV)
+
 ProofPay is milestone escrow for freelancers and their clients, run by an AI agent and PayPal Braintree. The agent turns an informal brief into milestones with criteria anyone can check, Braintree holds each milestone's payment on the client's card, the agent reviews the delivery against those criteria, and the client pays out the share the evidence supports. That can be the full amount, a partial amount, or nothing.
 
 ## The problem
@@ -64,7 +66,7 @@ Test card for the sandbox: `4111 1111 1111 1111`, any future expiry date, any CV
 
 ## Deploy
 
-`render.yaml` deploys ProofPay to Render as a Node web service. Add the Braintree and AI keys as environment variables in the Render dashboard.
+`render.yaml` deploys ProofPay to Render as a Node web service. Add the Braintree and AI keys as environment variables in the Render dashboard. `/api/health` reports whether the keys are configured (never their values) and serves as the health check. A scheduled GitHub Action pings it so the free instance stays awake for visitors.
 
 ## Limits and what comes next
 
