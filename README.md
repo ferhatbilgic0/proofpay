@@ -42,7 +42,7 @@ The payout number is deliberately computed in code from the verdicts, not produc
 
 ## Run it locally
 
-Requirements: Node.js 18.18 or later, a Braintree sandbox account, and a Gemini or Anthropic API key.
+Requirements: Node.js 20 or later, a Braintree sandbox account, and a Gemini or Anthropic API key.
 
 ```bash
 npm install
